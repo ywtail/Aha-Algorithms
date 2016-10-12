@@ -13,7 +13,6 @@ book[startx][starty]=1 #标记起点已经在路径中
 que=[[startx,starty]]
 head=0
 tail=0
-ma=0
 
 def count_kills(x,y):
 	num=0
@@ -40,6 +39,7 @@ def count_kills(x,y):
 		tempx-=1
 	return num
 
+ma=count_kills(startx,starty)
 while head<=tail:
 	for i in range(4):
 		tx=que[head][0]+nex[i][0]
