@@ -40,6 +40,8 @@ def count_kills(x,y):
 	return num
 
 ma=count_kills(startx,starty)
+printx=startx
+printy=starty
 while head<=tail:
 	for i in range(4):
 		tx=que[head][0]+nex[i][0]
