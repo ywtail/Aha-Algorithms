@@ -3,9 +3,10 @@
 
 n,m=map(int,raw_input().split()) #顶点与边个数
 e=[[9999999 for i in range(n+1)] for i in range(n+1)] #图存入邻接矩阵
+for i in range(1,n+1):
+	e[i][i]=0
 for i in range(m):
 	a,b=map(int,raw_input().split())
-	e[i+1][i+1]=0
 	e[a][b]=1
 	e[b][a]=1
 book=[0 for i in range(n+1)]
