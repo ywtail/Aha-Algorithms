@@ -1,5 +1,5 @@
 # coding:utf-8
-# 图遍历：BFS
+# 城市地图：DFS，找最短路径
 
 n,m=map(int,raw_input().split()) #顶点与边个数
 e=[[9999999 for i in range(n+1)] for i in range(n+1)] #图存入邻接矩阵
@@ -11,11 +11,11 @@ for i in range(m):
 book=[0 for i in range(n+1)]
 
 mi=9999999
-t=[]
+t=[] #记录路径
 def dfs(cur,dis):
 	global mi
 	t.append(cur)
-	if dis>mi:
+	if dis>mi: #如果当前dis>mi，直接返回
 		return
 	if cur==5:
 		if dis<mi:
